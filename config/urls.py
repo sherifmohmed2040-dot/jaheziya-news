@@ -9,5 +9,6 @@ urlpatterns = [
     path("", include("news.urls")),
 ]
 urlpatterns += [
+    re_path(r'^news_images/news_images/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     re_path(r'^news_images/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
