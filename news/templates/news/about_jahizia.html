@@ -33,6 +33,23 @@
             text-align: center;
             padding: 75px 20px 90px;
         }
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/news_images/jahizia-logo.png") center / 440px no-repeat;
+    opacity: 0.10;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
 
         .hero .label {
             color: #e7b65f;
@@ -108,7 +125,31 @@
             .card { padding: 27px 22px; }
             .activities { grid-template-columns: 1fr; }
         }
-    </style>
+    .zayed-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 9px 30px rgba(13, 64, 59, .10);
+}
+
+.zayed-section img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.zayed-text {
+    background: #0d615a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 42px;
+    font-size: 21px;
+}
+</style>
 </head>
 <body>
 
@@ -184,10 +225,13 @@
             </div>
         </section>
 
-        <section class="quote">
-            وتجسّد جاهزية في رسالتها نهج زايد في بناء الإنسان، وتعزيز المسؤولية
-            المجتمعية، وترسيخ ثقافة الاستعداد لخدمة الوطن وحماية المجتمع.
-        </section>
+       <section class="zayed-section">
+    <img src="/news_images/zayed-jahizia.jpeg" alt="فعالية من فعاليات جاهزية">
+    <div class="zayed-text">
+        وتجسّد جاهزية في رسالتها نهج زايد في بناء الإنسان، وتعزيز المسؤولية
+        المجتمعية، وترسيخ ثقافة الاستعداد لخدمة الوطن وحماية المجتمع.
+    </div>
+</section>
     </main>
 
 </body>
