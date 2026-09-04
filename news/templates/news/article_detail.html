@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ article.title }} | Jaheziya News</title>
+    <style>
+        body {
+            margin: 0;
+            background: #f7f5ef;
+            color: #123f3b;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+        .container {
+            width: min(900px, 90%);
+            margin: 50px auto;
+        }
+        .back {
+            display: inline-block;
+            color: #0d615a;
+            text-decoration: none;
+            margin-bottom: 28px;
+            font-weight: bold;
+        }
+        article {
+            background: white;
+            padding: 38px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.08);
+        }
+        .category {
+            color: #007d86;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            line-height: 1.5;
+        }
+        .date {
+            color: #777;
+            margin-bottom: 25px;
+        }
+        img {
+            width: 100%;
+            max-height: 560px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 10px 0 30px;
+        }
+        .content {
+            color: #3f5553;
+            font-size: 19px;
+            line-height: 2.1;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <a class="back" href="{% url 'home' %}">← العودة إلى الرئيسية</a>
+
+        <article>
+            <div class="category">{{ article.get_category_display }}</div>
+            <h1>{{ article.title }}</h1>
+            <div class="date">{{ article.published_at|date:"d F Y" }}</div>
+
+            {% if article.image %}
+                <img src="{{ article.image.url }}" alt="{{ article.title }}">
+            {% endif %}
+
+            <div class="content">{{ article.content|linebreaks }}</div>
+        </article>
+    </main>
+</body>
+</html>

@@ -301,7 +301,9 @@
                     </p>
                 {% endif %}
 
-                <a class="button" href="#news">استكشف آخر الأخبار</a>
+                {% if featured_article %}
+<a class="button" href="{% url 'article_detail' featured_article.pk %}">اقرأ الخبر كاملًا</a>
+{% endif %}
             </div>
 
             <div class="hero-card">
@@ -324,14 +326,14 @@
 
             <div class="articles">
                 {% for article in latest_articles %}
-                    <article class="article">
+                    <a class="article" href="{% url 'article_detail' article.pk %}" style="text-decoration:none; color:inherit;">
                         <div class="article-image"><img src="{{ article.image.url }}" alt="{{ article.title }}" style="width:100%; height:150px; object-fit:cover;"></div>
                         <div class="article-content">
                             <div class="category">{{ article.get_category_display }}</div>
                             <h3>{{ article.title }}</h3>
                             <p>{{ article.summary }}</p>
                         </div>
-                    </article>
+                    </a>
                 {% empty %}
                     <article class="article">
                         <div class="article-content">
