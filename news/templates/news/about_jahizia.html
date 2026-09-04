@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن جاهزية | Jaheziya News</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: #f7f5ef;
+            color: #163c38;
+            font-family: Tahoma, Arial, sans-serif;
+            line-height: 2;
+        }
+
+        .topbar {
+            background: #0d403b;
+            padding: 18px 7%;
+        }
+
+        .topbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: #0d403b;
+            color: #fff;
+            text-align: center;
+            padding: 75px 20px 90px;
+        }
+
+        .hero .label {
+            color: #e7b65f;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            margin: 10px 0;
+            font-size: clamp(38px, 6vw, 62px);
+        }
+
+        .hero p {
+            max-width: 730px;
+            margin: auto;
+            color: #e5efed;
+            font-size: 19px;
+        }
+
+        .container {
+            width: min(1050px, 90%);
+            margin: -42px auto 65px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 42px;
+            margin-bottom: 28px;
+            border-radius: 18px;
+            box-shadow: 0 9px 30px rgba(13, 64, 59, .10);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #0d615a;
+            font-size: 30px;
+        }
+
+        .lead {
+            font-size: 19px;
+            color: #405855;
+        }
+
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .activity {
+            background: #eaf3f1;
+            padding: 22px;
+            border-radius: 12px;
+            border-right: 5px solid #d5a44b;
+        }
+
+        .activity h3 {
+            margin: 0 0 8px;
+            color: #0d403b;
+        }
+
+        .quote {
+            background: #0d615a;
+            color: #fff;
+            text-align: center;
+            font-size: 21px;
+            padding: 38px;
+            border-radius: 18px;
+        }
+
+        @media (max-width: 700px) {
+            .card { padding: 27px 22px; }
+            .activities { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="topbar">
+        <a href="{% url 'home' %}">← العودة إلى الرئيسية</a>
+    </header>
+
+    <section class="hero">
+        <div class="label">JAHEZIYA INITIATIVE</div>
+        <h1>عن جاهزية</h1>
+        <p>الاستعداد يصنع الفرق، والمعرفة تحمي الأرواح.</p>
+    </section>
+
+    <main class="container">
+        <section class="card">
+            <h2>جاهزية</h2>
+
+            <p class="lead">
+                جاهزية هي مبادرة وبرنامج تدريبي يُعنى برفع مستوى الاستعداد
+                والاستجابة للحالات الطارئة وحوادث الإصابات الجماعية
+                (Mass Casualty Incidents).
+            </p>
+
+            <p>
+                تُنفَّذ المبادرة بالتعاون مع مكتب فخر الوطن وأطباء الإمارات
+                وجمعية القلب الإنعاشية الإماراتية.
+            </p>
+
+            <p>
+                تركّز جاهزية على تأهيل الكوادر والعناصر العاملة في خط الدفاع
+                الأول، بما يشمل أفراد الجيش والشرطة والدفاع المدني، والأطباء
+                والممرضين، إلى جانب أفراد المجتمع، بما يعزز قدرتهم على التعامل
+                المنظّم والفعّال مع الأزمات والكوارث والحوادث الكبرى.
+            </p>
+
+            <p>
+                وتسعى المبادرة إلى بناء ثقافة مستدامة من الوعي والاستعداد، من
+                خلال تطوير المعرفة والمهارات اللازمة للاستجابة السريعة، وحماية
+                الأرواح، ودعم المجتمع في الظروف الاستثنائية.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>أنشطة جاهزية</h2>
+
+            <p class="lead">
+                تعمل جاهزية على رفع الجاهزية الوطنية في دولة الإمارات العربية
+                المتحدة عبر برامج تدريبية تستهدف كوادر خط الدفاع الأول من الجيش
+                والشرطة والدفاع المدني والقطاعات الصحية، إلى جانب أفراد المجتمع.
+            </p>
+
+            <p>
+                كما امتد أثر المبادرة إلى عدد من الدول العربية من خلال مبادرات
+                تدريبية تعزز جاهزية الكوادر الطبية وغير الطبية في الصفوف الأمامية
+                للاستجابة بكفاءة لحالات الطوارئ والإصابات الجماعية.
+            </p>
+
+            <div class="activities">
+                <div class="activity">
+                    <h3>جاهزية مصر</h3>
+                    <p>بالتعاون مع وزارة الصحة المصرية.</p>
+                </div>
+
+                <div class="activity">
+                    <h3>جاهزية سوريا</h3>
+                    <p>بالتعاون مع وزارة الصحة السورية.</p>
+                </div>
+
+                <div class="activity">
+                    <h3>جاهزية المغرب</h3>
+                    <p>بالتعاون مع وزارة الصحة المغربية.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote">
+            وتجسّد جاهزية في رسالتها نهج زايد في بناء الإنسان، وتعزيز المسؤولية
+            المجتمعية، وترسيخ ثقافة الاستعداد لخدمة الوطن وحماية المجتمع.
+        </section>
+    </main>
+
+</body>
+</html>

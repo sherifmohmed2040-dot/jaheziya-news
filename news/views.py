@@ -13,3 +13,5 @@ def home(request):
 def article_detail(request, pk):
     article = get_object_or_404(Article, pk=pk)
     return render(request, "news/article_detail.html", {"article": article})
+def about_jahizia(request):
+    return render(request, "news/about_jahizia.html")
